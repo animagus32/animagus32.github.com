@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>近期任务 | Griffin&#39;s Blog</title>
+  <title>百度百科分类器 | Griffin&#39;s Blog</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -164,7 +164,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">近期任务</a></li>
+                        <li id="navbar-title"><a href="#">百度百科分类器</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -193,46 +193,86 @@
                   <div class="tag-tile">
                       
                       
-                      <a data-pjax href='/tags/hexo/' style='color:#D5D5D5'>hexo</a>
+                      <a data-pjax href='/tags/朴素贝叶斯分类/' style='color:#D5D5D5'>朴素贝叶斯分类</a>
                       
-                      <a data-pjax href='/tags/task/' style='color:#D5D5D5'>task</a>
+                      <a data-pjax href='/tags/机器学习/' style='color:#D5D5D5'>机器学习</a>
                       
-                      <a data-pjax href='/tags/test/' style='color:#D5D5D5'>test</a>
+                      <a data-pjax href='/tags/特征函数/' style='color:#D5D5D5'>特征函数</a>
                       
                       
                   </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D">近期任务</h1>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">百度百科分类器</h1>
 
                     <div class="post-meta">
                         Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2015-10-20T07:58:55.000Z"
-                              itemprop="datePublished">2015-10-20</time>
+                        <time datetime="2015-10-21T02:21:53.000Z"
+                              itemprop="datePublished">2015-10-21</time>
                     </div>
     </span>
 
         <section class="post-content">
-            <h2 id="机器学习">机器学习</h2><ol>
-<li>朴素贝叶斯算法</li>
-<li>NLTK package使用</li>
-<li>百度词条分类器<a id="more"></a>
+            <h2 id="问题">问题</h2><ol>
+<li><p>百度百科词条多类别<br>训练器只识别一种类别，所以导致准确率不高<br>nltk.classify.accurancy 只能判断一种类型.<br>决定自定义准确率函数</p>
+</li>
+<li><p>需要定义停用词<br>小词条文章内容小，容易把像<code>收藏</code>,<code>数字</code>等词汇纳入关键字</p>
 </li>
 </ol>
-<h2 id="健身">健身</h2><ol>
-<li>竖脊肌 锻炼</li>
-<li>核心肌肉锻炼</li>
-<li>手臂肌肉锻炼</li>
+<h2 id="特征函数测试">特征函数测试</h2><h4 id="训练集统计">训练集统计</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">自然:<span class="number">1761</span></span><br><span class="line">文化:<span class="number">10366</span></span><br><span class="line">地理:<span class="number">9625</span></span><br><span class="line">历史:<span class="number">2638</span></span><br><span class="line">生活:<span class="number">14840</span></span><br><span class="line">社会:<span class="number">12110</span></span><br><span class="line">艺术:<span class="number">8247</span></span><br><span class="line">人物:<span class="number">4015</span></span><br><span class="line">经济:<span class="number">5040</span></span><br><span class="line">科技:<span class="number">8139</span></span><br><span class="line">体育:<span class="number">4734</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>max seokeywords 4</li>
 </ol>
-<h2 id="其他">其他</h2><p><a href="http://www.neonan.com/movie/articles/48792" target="_blank" rel="external">这些惊艳的海报，竟比电影还好看！</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">20000</span> correct number:  <span class="number">8908</span></span><br><span class="line">accuracy: <span class="number">0.4454</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>max seo keywords = 0</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">20000</span> correct number:  <span class="number">6839</span></span><br><span class="line">accuracy: <span class="number">0.34195</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>max seo keywords 2</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">20000</span> correct number:  <span class="number">8853</span></span><br><span class="line">accuracy: <span class="number">0.44265</span></span><br></pre></td></tr></table></figure>
+<p>总数  ，    正确数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">文化 : [<span class="number">2519</span>, <span class="number">1621</span>]</span><br><span class="line">艺术 : [<span class="number">3314</span>, <span class="number">1094</span>]</span><br><span class="line">人物 : [<span class="number">1385</span>, <span class="number">472</span>]</span><br><span class="line">体育 : [<span class="number">966</span>, <span class="number">452</span>]</span><br><span class="line">自然 : [<span class="number">1188</span>, <span class="number">578</span>]</span><br><span class="line">开放分类 : [<span class="number">118</span>, <span class="number">1</span>]</span><br><span class="line">社会 : [<span class="number">2711</span>, <span class="number">494</span>]</span><br><span class="line">地理 : [<span class="number">1841</span>, <span class="number">334</span>]</span><br><span class="line">各国人物 : [<span class="number">331</span>, <span class="number">21</span>]</span><br><span class="line">书籍类型 : [<span class="number">88</span>, <span class="number">0</span>]</span><br><span class="line">经济 : [<span class="number">4932</span>, <span class="number">457</span>]</span><br><span class="line">历史 : [<span class="number">1570</span>, <span class="number">311</span>]</span><br><span class="line">生活 : [<span class="number">2997</span>, <span class="number">1366</span>]</span><br><span class="line">技术 : [<span class="number">38</span>, <span class="number">29</span>]</span><br><span class="line">科技 : [<span class="number">4617</span>, <span class="number">1623</span>]</span><br></pre></td></tr></table></figure>
+<ol>
+<li>优化数据库，更新类别词条<br> max seo keywords 2</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">20000</span> correct number:  <span class="number">10023</span></span><br><span class="line">accuracy: <span class="number">0.50115</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>采用stop words , seo 3 ,key 10<br>`accuracy: 0.5</p>
+</li>
+<li><p>seo 0 ,</p>
+</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">28000</span> correct number:  <span class="number">10182</span></span><br><span class="line">accuracy: <span class="number">0.363642857143</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>训练集87000，测试集属于训练集<br> seo 0 </li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">28000</span> correct number:  <span class="number">26799</span></span><br><span class="line">accuracy: <span class="number">0.957107142857</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>调整训练集 间隔获取文档训练分类器<br>seo 0<br>训练数和测试数 1：1 </li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">34182</span> correct number:  <span class="number">21051</span></span><br><span class="line">accuracy: <span class="number">0.615850447604</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>训练数和测试数 2:1 seo 0 </li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">22788</span> correct number:  <span class="number">14267</span></span><br><span class="line">accuracy: <span class="number">0.62607512726</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>训练数和测试数 3：1 seo 0 </li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">17091</span> correct number:  <span class="number">10737</span></span><br><span class="line">accuracy: <span class="number">0.62822538178</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>seo 3 训练数和测试数 3:1 </li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">total number:  <span class="number">22788</span> correct number:  <span class="number">16218</span></span><br><span class="line">accuracy: <span class="number">0.711690363349</span></span><br></pre></td></tr></table></figure>
 
         </section>
         <hr/>
         <nav class="pagination" style="width:auto" role="pagination">
             
-            <a data-pjax class="newer-posts" href="/2015/10/21/ML-bdbaike/">← Prev Post</a>
+            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
             
             <a class="share-button" data-original-title title>Share this Post</a>
             
-            <a data-pjax class="older-posts" href="/2015/10/16/hello-world/">Next Post →</a>
+            <a data-pjax class="older-posts" href="/2015/10/20/recent_task/">Next Post →</a>
             
         </nav>
         <br/>
