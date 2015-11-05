@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>newpage | Griffin&#39;s Blog</title>
+  <title>faceRecognition | Griffin&#39;s Blog</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -170,7 +170,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">newpage</a></li>
+                        <li id="navbar-title"><a href="#">faceRecognition</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -199,17 +199,55 @@
                   <div class="tag-tile">
                       
                   </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D">newpage</h1>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">faceRecognition</h1>
 
                     <div class="post-meta">
                         Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2015-10-16T09:05:57.000Z"
-                              itemprop="datePublished">2015-10-16</time>
+                        <time datetime="2015-11-02T09:02:30.000Z"
+                              itemprop="datePublished">2015-11-02</time>
                     </div>
     </span>
 
         <section class="post-content">
-            
+            <p>##共同点：</p>
+<ul>
+<li>都是基于Http的web API服务（RESTful架构），开发者在其网站拥有一定空间，可以上传face图像到server,进行人脸识别服务。</li>
+<li><p>提供的功能基本相同：<br>人脸检测、人脸识别、五官定位、人脸验证等</p>
+</li>
+<li><p>人脸检测可以检测同张图片多张人脸</p>
+</li>
+<li>识别的话貌似只提供一张脸的识别</li>
+</ul>
+<p>##异同点：</p>
+<ol>
+<li><p>###使用限制<br>####face++:<br>假设并发数限制为k，则任意时刻，Face++服务器只处理不超过k个来自于此App的请求。我们的限制是: 体验版(并发数限制为1), 开发版(并发数限制为3), 上线版(并发数无限制)。<br>单个开发版应用最多可创建5个Faceset/Group和100个Person。上线版应用不设限制<br>开发版可以申请升级到上线版<br>企业版需要商务合作<br>####TX:<br>目前没发现有开发版或上线版说明，其规则一样：<br>(1)一个app_id下建立的group_id数量限制为5000个。<br>(2)一个group_id下建立的person_id数量限制为1000个。<br>(3)一个person_id下建立的人脸数量限制为20个。<br>(4)每个请求的包体大小限制为2MB。</p>
+</li>
+<li><p>###后台管理</p>
+<h4 id="face++:">face++:</h4><p>拥有后台管理，可以在web上查看组或者人状态</p>
+</li>
+</ol>
+<h4 id="TX:">TX:</h4><p>目前有两个平台可以提供同样服务，一个是腾讯优图，一个是腾讯云，优图貌似没有后台管理，腾讯云可以统计使用服务次数。</p>
+<ol>
+<li>###SDK使用<br>####face++:<br>开发较早，最新版本2013年<br>在线API从使用情况看有时不太稳定</li>
+</ol>
+<p>TX:<br>2015年刚开放服务，SDK使用较face++方便</p>
+<ol>
+<li>###案例<br>####face++:<br>据说支付宝人脸识别技术来自face++; 美图秀秀、世纪佳缘、360搜索美女魔镜、美颜相机等。。。。</li>
+</ol>
+<p>####TX:<br>QQ空间、天天p图、微众银行（人脸验证）</p>
+<ol>
+<li>###技术成就<br>####face++:</li>
+</ol>
+<p>####TX:</p>
+<ol>
+<li>###服务</li>
+</ol>
+<ul>
+<li>提供功能基本相同</li>
+</ul>
+<p>####face++:<br>在线API<br>Face++提供人脸相关技术的在线API服务给开发者和企业使用。目前有基础版API供免费调用测试和小规模使用（会尽力维护API服务稳定性，但不保证每次调用均会成功），企业版API相对基础版API在算法和稳定性方面会有更好的表现。目前平台活跃着众多个人开发者，已产生了大量新奇、有趣的应用。<br>离线SDK<br>Face++还提供了人脸检测、人脸关键点检测和人脸分析的移动平台端（iOS和Android）离线SDK授权给需要离线使用场景的企业和开发者付费使用。包括美图秀秀、Camera360、魔漫相机、神拍手等移动应用厂商正在使用此项服务。</p>
+<p>####TX:<br>提供在线API ,IOS /ANDROID</p>
+
         </section>
         <hr/>
         <nav class="pagination" style="width:auto" role="pagination">
@@ -217,6 +255,8 @@
             <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
             
             <a class="share-button" data-original-title title>Share this Post</a>
+            
+            <a data-pjax class="older-posts" href="/2015/10/21/ML-bdbaike/">Next Post →</a>
             
         </nav>
         <br/>
